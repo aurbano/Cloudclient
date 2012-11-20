@@ -1,5 +1,7 @@
 # Ignore private files #
 *.ignore.php
+*_notes*
+*test*.php
 
 # Compiled source #
 ###################
