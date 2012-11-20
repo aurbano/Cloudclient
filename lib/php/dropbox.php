@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 	CUSTOM Dropbox Wrapper class
 		It will help talking with dropbox
 		also making sure that api calls work the same way
@@ -15,8 +15,7 @@
 	Built by Alejandro U. Alvarez <alejandro@urbanoalvarez.es>
 	http://urbanoalvarez.es
 */
-
-include 'dropbox/autoload.php';
+include('dropbox/autoload.php');
 
 class Dropbox{
 	// ---------  Setup variables --------- //
@@ -87,7 +86,7 @@ class Dropbox{
 		if($this->state) return '#logged';
 		try{
 			$this->requestToken();
-			return $this->oauth->getAuthorizeUrl('http://local.cloudclient.es/dpAuth.php');
+			return $this->oauth->getAuthorizeUrl('http://cloudclient.es/dpAuth.php');
 		}catch(Exception $e){
 			die($e);	
 		}

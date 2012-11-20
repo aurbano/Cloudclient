@@ -1,7 +1,6 @@
 <?php
-error_reporting(E_ERROR | E_WARNING | E_PARSE);
-ini_set('error_reporting', E_ERROR | E_WARNING | E_PARSE);
 session_start();
+set_include_path('/home8/djsmusic/php');
 /*	Session handler, must be included anywhere you want to track users
  *  it also handles all includes and such. So it's the only file that
  *  is really needed.
@@ -22,25 +21,7 @@ class Session{
 		if($_SESSION['user']['logged']){
 			$this->usid = $_SESSION['user']['id'];
 			$this->logged = true;
-		}/*else{
-			// Rebuild session
-			$_SESSION = array(
-				'dropbox'=>array(
-					'oauth_tokens'=>array(
-						'token'=>'if4o5njtgmt9etz',
-						'token_secret'=>'e906am88oypu67d',
-						'state'=>1,
-						'id'=>57833018
-						,'email'=>'aluralma@gmail.com',
-						'root'=>1
-					)
-				),
-				'logged'=>1,
-				'id'=>1
-			);
-			$this->usid = $_SESSION['user']['id'];
-			$this->logged = true;	
-		}*/
+		}
 	}
 	
 	// Database connection
@@ -92,7 +73,7 @@ class Session{
 		$loginURI = 'https://www.dropbox.com/1/oauth/authorize';
 		$tokenURI = 'https://api.dropbox.com/1/oauth/access_token';
 		$token = $this->getToken();
-        return $loginURI . '?oauth_token=' . $token['token'] . '&oauth_callback=local.cloudclient.es/dpAuth.php';
+        return $loginURI . '?oauth_token=' . $token['token'] . '&oauth_callback=http://cloudclient.es/dpAuth.php';
 	}
 };
 $sess = new Session();

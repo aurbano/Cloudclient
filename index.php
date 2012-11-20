@@ -9,7 +9,7 @@ if($sess->logged()){
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Cloudclient.es</title>
+<title>Cloudclient | Dropbox web client</title>
 <style type="text/css" media="all">
 html,body{
 	padding:0;
