@@ -150,11 +150,11 @@ a, a:visited, a:focus, a:link{
 	box-shadow:inset #ccc 0 0 20px;
 }
 .item a .zip{
-	background:#f7e07c url(img/icons/zip.png) no-repeat 39px;
+	background:#f7e07c url(img/icons/zip.png) no-repeat 50%;
 	box-shadow:inset #e7d174 0 0 20px;
 }
 .item a:hover .zip{
-	background:#f8d745 url(img/icons/zip.png) no-repeat 39px;
+	background:#f8d745 url(img/icons/zip.png) no-repeat 50%;
 }
 .item a .file .preview{
 	color:#CCC;
@@ -165,7 +165,7 @@ a, a:visited, a:focus, a:link{
 }
 .item a .icon .folder{
 	position:absolute;
-	width:40px;
+	width:30%;
 	height:20px;
 	left:10px;
 	border-radius:2px;
@@ -247,12 +247,12 @@ a, a:visited, a:focus, a:link{
 }
 .iconSize{
 	border:#999 solid 1px;
-	background:#CCC;
+	background:#0a498e;
 	padding:3px;
 	margin-left:5px;	
 }
 .iconSize:hover{
-	border:#666666 solid 1px;
+	border:#fff solid 1px;
 }
 </style>
 <link rel="stylesheet" type="text/css" href="/lib/jqueryUI/css/redmond/jquery-ui-1.9.1.custom.min.css" media="all" />
@@ -265,13 +265,13 @@ a, a:visited, a:focus, a:link{
     <div id="breadcrumbs">Start</div>
 	<div id="nav">
 		<ul>
-			<li><a href="#help" rel="info">Help</a></li>
-			<li><a href="#contact" rel="info">Contact us</a></li>
-			<li><a href="/reset">Logout</a></li>
+			<li><a href="#about" rel="info" title="More information">About</a></li>
+			<li><a href="#contact" rel="info" title="Show contact options">Contact us</a></li>
+			<li><a href="/reset" title="Close current session">Logout</a></li>
 		</ul>
 	</div>
     <div id="mainOpts">
-    	<a href="#icons" rel="10" class="iconSize" style="padding:3px 9px;">+</a><a href="#icons" rel="-10" class="iconSize" style="padding: 1px 6px; font-size: 9px;">-</a>
+    	<a href="#icons" rel="6" class="iconSize" style="padding:3px 9px;" title="Bigger icons">+</a><a href="#icons" rel="-6" class="iconSize" style="padding: 1px 6px; font-size: 9px;" title="Smaller icons">-</a>
     </div>
 </div>
 <div id="back"><a href="#back" rel="1">&lt;</a></div>
@@ -280,7 +280,7 @@ a, a:visited, a:focus, a:link{
 	<div id="loading"><img src="/img/load/client.gif" alt="Cargando..." style="margin-right:15px;" /> Loading...</div>
 </div>
 <div id="infoBox">
-	<div id="help">
+	<div id="about">
 		<h2>Why?</h2>
 		<p>Because I can, and I wanted to learn about Dropbox structure.</p>
 		<h2>How?</h2>
