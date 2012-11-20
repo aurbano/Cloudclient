@@ -1,0 +1,26 @@
+# Error docs ;)
+ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php
+ErrorDocument 500 /500.php
+
+#Sin indices de directorio
+Options -Indexes
+
+# this is the initialization
+# For security reasons, Option followsymlinks cannot be overridden.
+#Options         +FollowSymLinks
+Options +SymLinksIfOwnerMatch
+RewriteEngine   On
+
+# These are the rewrite conditions
+RewriteCond     %{REQUEST_FILENAME}     !-f
+RewriteCond     %{REQUEST_FILENAME}     !-d
+RewriteCond		%{SCRIPT_FILENAME}		!-f
+RewriteCond		%{SCRIPT_FILENAME}		!-d
+
+# Descarga de archivos
+RewriteRule ^file/(.*)$ file.php?file=$1 [NC,QSA]
+RewriteRule ^thumb/(.*)$ thumb.php?file=$1 [NC,QSA]
+
+# Regla generica para quitar .php
+RewriteRule ^([A-Za-z0-9-_]+)$ /$1.php [L,NC,QSA]
