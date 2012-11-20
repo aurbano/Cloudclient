@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set('error_reporting', E_ALL);
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+ini_set('error_reporting', E_ERROR | E_WARNING | E_PARSE);
 session_start();
 /*	Session handler, must be included anywhere you want to track users
  *  it also handles all includes and such. So it's the only file that

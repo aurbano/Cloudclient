@@ -34,11 +34,24 @@ a:hover{
 	position:relative;
 	background:rgba(255,255,255,0.3);
 	padding:20px;
-	width:400px;
-	margin:20% auto;
+	margin:20% 0 0 0;
 	text-align:center;
 	color:#FFF;
 	box-shadow:#004264 0 0 20px;
+}
+#box h1{
+	position:absolute;
+	font-weight:normal;
+	left:0;
+	font-size:60px;
+	top:-10px;
+	margin:0;
+	padding:0;
+	color:white;
+	color:rgba(255,255,255,0.5);	
+}
+#box:hover h1{
+	color:rgba(255,255,255,0.8);
 }
 #box a:hover{
 	color:#FFC;
@@ -52,6 +65,14 @@ a:hover{
 }
 </style>
 <link rel="stylesheet" type="text/css" href="/lib/jqueryUI/css/redmond/jquery-ui-1.9.1.custom.min.css" media="all" />
+</head>
+
+<body>
+<div id="nav"><a href="/reset">Reset</a></div>
+<div id="box">
+	<h1>Cloudclient</h1>
+	<div id="login" class="hideOnAction"><a href="<?php echo $dp->loginLink(); ?>" class="externalLogin">Log in via Dropbox</a></div>
+</div>
 <script type="text/javascript" language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" language="javascript" src="/lib/jqueryUI/js/jquery-ui-1.9.1.custom.min.js"></script>
 <script type="text/javascript">
@@ -72,12 +93,5 @@ $(document).ready(function(){
 	$('#box').draggable();
 });
 </script>
-</head>
-
-<body>
-<div id="nav"><a href="/reset">Reset</a></div>
-<div id="box">
-	<div id="login" class="hideOnAction"><a href="<?php echo $dp->loginLink(); ?>" class="externalLogin">Log in via Dropbox</a></div>
-</div>
 </body>
 </html>

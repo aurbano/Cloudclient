@@ -124,8 +124,8 @@ class Dropbox{
 	  * so that the client can call the update system
 	  */
 	
-	public function dir($dir=NULL){
-		if($dir==NULL || $dir==0) $dir = '/';
+	public function dir($dir=false){
+		if(!$dir) $dir = '/';
 		// OK, fetch dir info (from DB)
 		return $this->fetchDirDropbox($dir); 
 	}
@@ -133,10 +133,6 @@ class Dropbox{
 	// Create/Update local cache for a given directory
 	// The directory must be given as an ID, unless it's the root folder
 	private function fetchDirDropbox($dir){
-		global $sess;
-		// If dirId is null, its the root folder
-		$hash = false;
-		
 		try{
 			$content = $this->dp->getMetaData($dir, true);
 		}catch(Exception $e){
@@ -145,7 +141,7 @@ class Dropbox{
 		$total = sizeof($content['contents']);
 		// $content 0 will be used for root if root was requested
 		$start = 0;
-		if($dir == '/'){
+		if($dir === '/'){
 			$start = 1;
 			$return[0]['uid'] = $this->uid();
 			$return[0]['parent'] = 'root';
@@ -162,7 +158,7 @@ class Dropbox{
 		// By now I will just iterate and store
 		for($i=$start;$i<$total+$start;$i++){
 			// I have all info for each file. Prettify for javascript
-			$cur = $content['contents'][$i-1];
+			$cur = $content['contents'][$i-$start];
 			$type = 1;
 			if($cur['is_dir']==1) $type = 0;
 			$name = substr($cur['path'],strrpos($cur['path'],'/')+1);

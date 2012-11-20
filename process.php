@@ -14,7 +14,7 @@ if(!$dp->logged()) finish('500 Not authorised (Dropbox)');
 switch($_POST['type']){
 	case 'list':
 		// User is logged in
-		if(!$_POST['dir'] || !is_numeric($_POST['dir']) || $_POST['dir'] < 0) $_POST['dir'] = NULL;
+		if(!$_POST['dir'] || strlen($_POST['dir'])<1) $_POST['dir'] = false;
 		// List files
 		try{
 			$files = $dp->dir($_POST['dir']);

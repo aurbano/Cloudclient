@@ -37,7 +37,7 @@ a, a:visited, a:focus, a:link{
 #header h1{
 	position:absolute;
 	left:120px;
-	bottom:10px;
+	bottom:40px;
 	margin:0;
 	padding:0;
 	font-weight:100;
@@ -45,7 +45,7 @@ a, a:visited, a:focus, a:link{
 }
 #breadcrumbs{
 	position:absolute;
-	bottom:20px;
+	bottom:55px;
 	left:450px;
 	color:#96c3f5;
 }
@@ -58,7 +58,7 @@ a, a:visited, a:focus, a:link{
 }
 #nav{
 	position:absolute;
-	bottom:20px;
+	bottom:55px;
 	right:100px;
 	color:#96c3f5;	
 }
@@ -80,7 +80,7 @@ a, a:visited, a:focus, a:link{
 	z-index:9;	
 	top:50px;
 	left:0;
-	width:200px;
+	width:60px;
 	color:white;
 }
 #back{
@@ -98,8 +98,8 @@ a, a:visited, a:focus, a:link{
 }
 #viewport{
 	position:absolute;
-	top:150px; /* Must be header height */
-	left:200px;
+	top:150px;		/* Must be header height */
+	left:60px;		/* Must be sidebar width */
 	overflow:hidden;
 }
 .view{
@@ -216,7 +216,7 @@ a, a:visited, a:focus, a:link{
 }
 #infoBox{
 	position:absolute;
-	top:330px;
+	top:140px;
 	width:100%;
 	left:0;
 	display:none;	
