@@ -28,12 +28,12 @@ switch($_POST['type']){
 		die(json_encode(array('done'=>true,'msg'=>'','id'=>$dp->root())));	
 		break;
 	case 'move':
-		if(!is_numeric($_POST['elemID']) || $_POST['elemID'] < 1 || !is_numeric($_POST['destID']) || $_POST['destID'] < 1 || strlen($_POST['elemName'])<1 || strlen($_POST['destName'])<1){
+		if(strlen($_POST['elem'])<1 || strlen($_POST['dest'])<1){
 			finish('400 Bad request');
 		}
 		// All good, let's move!
 		try{
-			$dp->move($_POST['elemID'],$_POST['elemName'],$_POST['destID'],$_POST['destName'],$_POST['path']);
+			$dp->move($_POST['elem'],$_POST['dest'],$_POST['path']);
 			finish('',true);
 		}catch(Exception $e){
 			 finish($e->getMessage());
