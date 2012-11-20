@@ -123,16 +123,14 @@ a, a:visited, a:focus, a:link{
 }
 .item a{
 	display:block;
-	width:134px;
-	height:190px;
 	text-align:center;
 	margin:10px 20px;	
 	position:relative;
 	color:inherit;
 }
 .item a .icon{
-	width:128px;
-	height:128px;
+	width:95%;
+	height:65%;
 	border-radius:4px;
 	position:relative;
 }
@@ -158,6 +156,7 @@ a, a:visited, a:focus, a:link{
 	font-size:9px;
 	text-align:left;
 	padding:7px 15px;
+	overflow:hidden;
 }
 .item a .icon .folder{
 	position:absolute;
@@ -196,7 +195,7 @@ a, a:visited, a:focus, a:link{
 	position:absolute;
 	width:100%;
 	left:0;
-	top:138px;
+	top:75%;
 	word-wrap: break-word;
 }
 .item a:hover .folder, .item .selected, .item .selected .folder{
