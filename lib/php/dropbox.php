@@ -148,7 +148,7 @@ class Dropbox{
 		if($dir == '/'){
 			$start = 1;
 			$return[0]['uid'] = $this->uid();
-			$return[0]['parent'] = '/';
+			$return[0]['parent'] = 'root';
 			$return[0]['name'] = '/';
 			$return[0]['icon'] = 'folder';
 			$return[0]['type'] = 0;
@@ -171,7 +171,7 @@ class Dropbox{
 			if(isset($cur['mime_type'])) $mime = $cur['mime_type'];
 			
 			$return[$i]['uid'] = $this->uid();
-			$return[$i]['parent'] = $cur['path'];
+			$return[$i]['parent'] = $dir;
 			$return[$i]['name'] = $name;
 			$return[$i]['icon'] = $cur['icon'];
 			$return[$i]['type'] = $type;

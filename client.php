@@ -31,6 +31,9 @@ a, a:visited, a:focus, a:link{
 	left:0;
 	z-index:9;
 }
+#header, .item .name{
+	text-shadow:#069 0 1px 1px;
+}
 #header h1{
 	position:absolute;
 	left:120px;
@@ -241,14 +244,6 @@ a, a:visited, a:focus, a:link{
 </style>
 <link rel="stylesheet" type="text/css" href="/lib/jqueryUI/css/redmond/jquery-ui-1.9.1.custom.min.css" media="all" />
 <link rel="stylesheet" type="text/css" href="lib/lightbox/css/jquery.lightbox-0.5.css" media="screen" />
-<!--[if lt IE 9]>
-	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-<![endif]-->
-<script type="text/javascript" language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" language="javascript" src="/lib/jqueryUI/js/jquery-ui-1.9.1.custom.min.js"></script>
-<script type="text/javascript" src="lib/lightbox/js/jquery.lightbox-0.5.min.js"></script>
-<script type="text/javascript" language="javascript" src="lib/js/UIview.js"></script>
-<script type="text/javascript" language="javascript" src="lib/js/client.js"></script>
 </head>
 
 <body>
@@ -287,5 +282,13 @@ a, a:visited, a:focus, a:link{
 		<a href="#close" class="close"><img src="/img/close.png" /></a>
 	</div>
 </div>
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<script type="text/javascript" language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="/lib/jqueryUI/js/jquery-ui-1.9.1.custom.min.js"></script>
+<script type="text/javascript" src="lib/lightbox/js/jquery.lightbox-0.5.min.js"></script>
+<script type="text/javascript" language="javascript" src="lib/js/UIview.js"></script>
+<script type="text/javascript" language="javascript" src="lib/js/client.js"></script>
 </body>
 </html>
