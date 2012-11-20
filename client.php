@@ -75,6 +75,11 @@ a, a:visited, a:focus, a:link{
 #nav a:hover{
 	color:#fff;	
 }
+#mainOpts{
+	position:absolute;
+	right:20px;
+	bottom:55px;	
+}
 #sidebar{
 	position:absolute;
 	z-index:9;	
@@ -240,6 +245,15 @@ a, a:visited, a:focus, a:link{
 	box-shadow:#0A4A8E 0 0 15px;
 	position:relative;	
 }
+.iconSize{
+	border:#999 solid 1px;
+	background:#CCC;
+	padding:3px;
+	margin-left:5px;	
+}
+.iconSize:hover{
+	border:#666666 solid 1px;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="/lib/jqueryUI/css/redmond/jquery-ui-1.9.1.custom.min.css" media="all" />
 <link rel="stylesheet" type="text/css" href="lib/lightbox/css/jquery.lightbox-0.5.css" media="screen" />
@@ -256,6 +270,9 @@ a, a:visited, a:focus, a:link{
 			<li><a href="/reset">Logout</a></li>
 		</ul>
 	</div>
+    <div id="mainOpts">
+    	<a href="#icons" rel="10" class="iconSize" style="padding:3px 9px;">+</a><a href="#icons" rel="-10" class="iconSize" style="padding: 1px 6px; font-size: 9px;">-</a>
+    </div>
 </div>
 <div id="back"><a href="#back" rel="1">&lt;</a></div>
 <div id="sidebar"></div>
