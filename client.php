@@ -12,10 +12,9 @@ html,body{
 	background:#0a4a8e url(img/body/bg.png) no-repeat bottom left;
 	padding:0;
 	margin:0;
-	width:100%;
-	height:100%;
 	font-family: "Century Gothic","Avant Garde Gothic",sans-serif;
 	overflow:hidden;
+	height:100%;
 }
 a, a:visited, a:focus, a:link{
 	outline:none;
@@ -24,30 +23,27 @@ a, a:visited, a:focus, a:link{
 }
 #header{
 	color:white;
-	height:150px;
-	width:100%;
-	position:absolute;
-	top:0;
-	left:0;
+	width:90%;
+	margin:1em 5%;
 	z-index:9;
+	position:relative;
 }
 #header, .item .name{
 	text-shadow:#069 0 1px 1px;
 }
 #header h1{
-	position:absolute;
-	left:120px;
-	bottom:40px;
-	margin:0;
 	padding:0;
 	font-weight:100;
-	font-size:48px;
+	font-size:3em;
+	display:inline-block;
 }
 #breadcrumbs{
-	position:absolute;
-	bottom:55px;
-	left:450px;
 	color:#96c3f5;
+	display:inline-block;
+	position:relative;
+	bottom:10px;
+	padding:0 5%;
+	
 }
 #breadcrumbs a{
 	color:#FFF;
@@ -57,10 +53,11 @@ a, a:visited, a:focus, a:link{
 	color:#FF9;
 }
 #nav{
-	position:absolute;
-	bottom:55px;
-	right:100px;
 	color:#96c3f5;	
+	width:48%;
+	position:absolute;
+	bottom:3em;
+	right:6em;
 }
 #nav ul{
 	margin:0;
@@ -69,16 +66,17 @@ a, a:visited, a:focus, a:link{
 	font-size:21px;	
 }
 #nav ul li{
-	display:inline;
-	margin-right:100px;	
+	display:inline-block;
+	width:32%;
+	text-align:center;
 }
 #nav a:hover{
 	color:#fff;	
 }
 #mainOpts{
 	position:absolute;
-	right:20px;
-	bottom:55px;	
+	right:1em;
+	top:3em;	
 }
 #sidebar{
 	position:absolute;
@@ -254,6 +252,15 @@ a, a:visited, a:focus, a:link{
 .iconSize:hover{
 	border:#fff solid 1px;
 }
+
+
+@media screen and (max-width: 960px) {
+	#nav{
+		position:static;
+		width:100%;
+	}
+}
+
 </style>
 <link rel="stylesheet" type="text/css" href="/lib/jqueryUI/css/redmond/jquery-ui-1.9.1.custom.min.css" media="all" />
 <link rel="stylesheet" type="text/css" href="lib/lightbox/css/jquery.lightbox-0.5.css" media="screen" />
