@@ -279,7 +279,7 @@ a, a:visited, a:focus, a:link{
 		</ul>
 	</div>
     <div id="mainOpts">
-	    <a href="#addFolder" class="iconSize" style="padding:3px 9px; background:#f9dd63; position:relative;" title="Add folder"><span></span>+</a>
+	    <a href="#addFolder" class="iconSize" style="padding:3px 11px; background:#f9dd63; position:relative; color:#0a498e" title="Add folder"><span></span>+</a>
     	<a href="#icons" rel="6" class="iconSize" style="padding:3px 9px;" title="Bigger icons">+</a><a href="#icons" rel="-6" class="iconSize" style="padding: 1px 6px; font-size: 9px;" title="Smaller icons">-</a>
     </div>
 </div>
