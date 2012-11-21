@@ -15,6 +15,7 @@ html,body{
 	font-family: "Century Gothic","Avant Garde Gothic",sans-serif;
 	overflow:hidden;
 	height:100%;
+	font-size:1em;
 }
 a, a:visited, a:focus, a:link{
 	outline:none;
@@ -24,7 +25,7 @@ a, a:visited, a:focus, a:link{
 #header{
 	color:white;
 	width:90%;
-	margin:1em 5%;
+	margin:2em 5%;
 	z-index:9;
 	position:relative;
 }
@@ -34,16 +35,16 @@ a, a:visited, a:focus, a:link{
 #header h1{
 	padding:0;
 	font-weight:100;
-	font-size:3em;
+	font-size:300%;
 	display:inline-block;
+	margin:0;
 }
 #breadcrumbs{
 	color:#96c3f5;
-	display:inline-block;
-	position:relative;
-	bottom:10px;
-	padding:0 5%;
-	
+	display:block;
+	position:absolute;
+	left:20em;	
+	top:1.3em;
 }
 #breadcrumbs a{
 	color:#FFF;
@@ -54,10 +55,11 @@ a, a:visited, a:focus, a:link{
 }
 #nav{
 	color:#96c3f5;	
-	width:48%;
+	width:40%;
 	position:absolute;
-	bottom:3em;
+	top:1em;
 	right:6em;
+	display:inline-block;
 }
 #nav ul{
 	margin:0;
@@ -76,7 +78,7 @@ a, a:visited, a:focus, a:link{
 #mainOpts{
 	position:absolute;
 	right:1em;
-	top:3em;	
+	top:1.2em;	
 }
 #sidebar{
 	position:absolute;
@@ -258,8 +260,33 @@ a, a:visited, a:focus, a:link{
 	#nav{
 		position:static;
 		width:100%;
+		margin:1em 0;
 	}
 }
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 640px) {
+	html,body{
+		font-size:95%;
+	}
+	
+	#breadcrumbs{
+		margin:1em 0;
+		position:static;
+	}
+}
+@media screen and (max-width: 480px) {
+	#nav ul li{
+		width:100%;
+		display:block;
+		margin:0.5em 0;
+	}
+}
+@media screen and (max-width: 320px) {
+
+}
+
 
 </style>
 <link rel="stylesheet" type="text/css" href="/lib/jqueryUI/css/redmond/jquery-ui-1.9.1.custom.min.css" media="all" />
@@ -269,7 +296,6 @@ a, a:visited, a:focus, a:link{
 <body>
 <div id="header">
     <h1>Cloudclient</h1>
-    <div id="breadcrumbs">Start</div>
 	<div id="nav">
 		<ul>
 			<li><a href="#about" rel="info" title="More information">About</a></li>
@@ -277,6 +303,7 @@ a, a:visited, a:focus, a:link{
 			<li><a href="/reset" title="Close current session">Logout</a></li>
 		</ul>
 	</div>
+    <div id="breadcrumbs">Start</div>
     <div id="mainOpts">
     	<a href="#icons" rel="6" class="iconSize" style="padding:3px 9px;" title="Bigger icons">+</a><a href="#icons" rel="-6" class="iconSize" style="padding: 1px 6px; font-size: 9px;" title="Smaller icons">-</a>
     </div>
