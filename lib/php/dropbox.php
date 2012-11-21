@@ -45,7 +45,7 @@ class Dropbox{
 				$this->uid = $_SESSION['dropbox']['id'];
 			}
 		}catch(Exception $e){
-			throw Exception($e);	
+			throw new Exception($e);	
 		}
 	}
 	
