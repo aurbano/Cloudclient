@@ -75,6 +75,14 @@ a, a:visited, a:focus, a:link{
 #nav a:hover{
 	color:#fff;	
 }
+#mainOpts a span{
+	position:absolute;
+	top:-3px;
+	left:3px;
+	width:11px;
+	height:3px;
+	background:inherit;
+}
 #mainOpts{
 	position:absolute;
 	right:20px;
@@ -271,6 +279,7 @@ a, a:visited, a:focus, a:link{
 		</ul>
 	</div>
     <div id="mainOpts">
+	    <a href="#addFolder" class="iconSize" style="padding:3px 9px; background:#f9dd63; position:relative;" title="Add folder"><span></span>+</a>
     	<a href="#icons" rel="6" class="iconSize" style="padding:3px 9px;" title="Bigger icons">+</a><a href="#icons" rel="-6" class="iconSize" style="padding: 1px 6px; font-size: 9px;" title="Smaller icons">-</a>
     </div>
 </div>
