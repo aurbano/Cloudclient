@@ -1,6 +1,7 @@
 <?php
 session_start();
-set_include_path('/home8/djsmusic/php');
+error_reporting(E_ERROR | E_WARNING);
+//set_include_path('/home8/djsmusic/php');
 /*	Session handler, must be included anywhere you want to track users
  *  it also handles all includes and such. So it's the only file that
  *  is really needed.
