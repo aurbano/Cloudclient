@@ -284,7 +284,9 @@ a, a:visited, a:focus, a:link{
 	}
 }
 @media screen and (max-width: 320px) {
-
+	html, body{
+		font-size:90%;
+	}
 }
 
 
