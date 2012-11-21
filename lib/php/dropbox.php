@@ -86,7 +86,7 @@ class Dropbox{
 		if($this->state) return '#logged';
 		try{
 			$this->requestToken();
-			return $this->oauth->getAuthorizeUrl('http://cloudclient.es/dpAuth.php');
+			return $this->oauth->getAuthorizeUrl('http://'.$_SERVER['HTTP_HOST'].'/dpAuth.php');
 		}catch(Exception $e){
 			die($e);	
 		}
