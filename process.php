@@ -39,6 +39,18 @@ switch($_POST['type']){
 			 finish($e->getMessage());
 		}
 		break;
+	case 'addFolder':
+		if(strlen($_POST['name'])<1){
+			finish('400 Bad request');
+		}
+		// All good, let's move!
+		try{
+			$dp->createFolder($_POST['name'],$_POST['path']);
+			finish('',true);
+		}catch(Exception $e){
+			 finish($e->getMessage());
+		}
+		break;
 	default:
 		finish('400 Bad request');	
 }
