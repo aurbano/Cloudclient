@@ -388,26 +388,8 @@ a, a:visited, a:focus, a:link{
 	</div>
 </div>
 <div id="context-menu">
-<<<<<<< HEAD
 <ul><span id="fileOps" style="display:none;">
 <li><a href="#fileOps" rel="rename"><i class="icon-pencil"></i>Rename</a></li><li><a href="#fileOps" rel="copy"><i class="icon-floppy"></i>Copy</a></li><li><a href="#fileOps" rel="cut"><i class="icon-popup"></i>Cut</a></li><br /><li><a href="#fileOps" rel="delete" class="red"><i class="icon-trash"></i>Delete</a></li></span><li id="pasteOp" style="display:none"><a href="#fileOps" rel="paste"><i class="icon-docs"></i>Paste</a></li><li><a href="#addFolder"><i class="icon-folder"></i>New folder</a></li><li><a href="#about" rel="info"><i class="icon-help"></i>Help</a></li></ul></div>
-=======
-	<ul>
-		<div id="fileOps" style="display:none;">
-			<li>
-            	<a href="#fileOps" rel="rename"><i class="icon-pencil"></i> Rename</a></li><li>
-            	<a href="#fileOps" rel="copy"><i class="icon-floppy"></i> Copy</a></li><li>
-                <a href="#fileOps" rel="cut"><i class="icon-popup"></i> Cut</a></li><li id="pasteOp" style="display:none">
-                <a href="#fileOps" rel="paste"><i class="icon-docs"></i> Paste</a></li><li>
-                <a href="#fileOps" rel="delete" class="red"><i class="icon-trash"></i> Delete</a></li>
-		</div>
-		<li>
-        	<a href="#addFolder"><i class="icon-folder"></i>  New folder</a></li><li>
-        	<a href="#about" rel="info"><i class="icon-help"></i>  Help</a>
-        </li>
-	</ul>
-</div>
->>>>>>> origin/responsive
 <!--[if lt IE 9]>
 	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
