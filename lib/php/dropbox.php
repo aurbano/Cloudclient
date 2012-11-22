@@ -253,6 +253,18 @@ class Dropbox{
 		}
 	}
 	
+	public function copy($elem,$elemPath,$destPath){
+		try{
+			$elemPath = rtrim($elemPath, '/');
+			$destPath = rtrim($destPath, '/');
+			// Copy it to new path (Same name)
+			$this->dp->copy($elemPath.'/'.$elem, $destPath.'/'.$elem);
+			return true;
+		}catch(Exception $e){
+			throw new Exception($e);
+		}
+	}
+	
 	public function delete($elem,$path){
 		try{
 			$path = rtrim($path, '/');
