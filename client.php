@@ -305,45 +305,42 @@ a, a:visited, a:focus, a:link{
 #context-menu{
     z-index:1000;
     position: absolute;
-    background-color:#ddd;
-    border: 1px solid #777;
+    background-color:#fff;
     padding: 0px;
-	padding-left:30px;
 	display:none;
-	font-size:13px;
 	box-shadow:#555 0 0 10px;
 	font-family:Tahoma, Geneva, sans-serif;
 	min-width:300px;
+	margin:0 1px 1px 0;
 }
 #context-menu ul{
 	margin:0;
 	padding:0;
 	list-style:none;
-	border-left:#ccc solid 1px;
-	background-color:#efefef;
 }
-#context-menu ul li{
-	border:none;
-	border-left:#fff solid 1px;
+
+#context-menu ul li,#context-menu ul li{
+	display:inline-block;
+	text-align:center;
+	padding:1px 0 0 1px;
 }
-#context-menu ul li a{
-	display:block;
-	padding:3px 6px;
-	color:#000;
+#context-menu ul li,#context-menu ul li a{
+	display:inline-block;
 	text-decoration:none;
-	border:#efefef 1px solid;
-	border-radius:2px;
-	margin:1px;
+	background:#36C;
+	color:#fff;
+	width:98px;
+	height:98px;
+	font-size:90%;
 }
 #context-menu ul li a:hover{
-	background:#999;
-	border:#aecff7 1px solid;
-	background:#eff2f6;
+	background:#009;
 }
-#context-menu hr{
-	border:none;
-	border-bottom:#FFF solid 1px;
-	border-top:#ccc solid 1px;	
+#context-menu ul li a i{
+	font-size:5.25em;
+	display:block;
+	width:auto;
+	margin-right:0;
 }
 </style>
 <link rel="stylesheet" type="text/css" href="/lib/jqueryUI/css/redmond/jquery-ui-1.9.1.custom.min.css" media="all" />
@@ -393,15 +390,17 @@ a, a:visited, a:focus, a:link{
 <div id="context-menu">
 	<ul>
 		<div id="fileOps" style="display:none;">
-			<li><a href="#fileOps" rel="rename">Rename</a></li>
-			<li><a href="#fileOps" rel="copy">Copy</a></li>
-			<li><a href="#fileOps" rel="cut">Cut</a></li>
-			<li><a href="#fileOps" rel="delete">Delete</a></li>
-			<li><hr /></li>
+			<li>
+            	<a href="#fileOps" rel="rename"><i class="icon-pencil"></i> Rename</a></li><li>
+            	<a href="#fileOps" rel="copy"><i class="icon-floppy"></i> Copy</a></li><li>
+                <a href="#fileOps" rel="cut"><i class="icon-popup"></i> Cut</a></li><li id="pasteOp" style="display:none">
+                <a href="#fileOps" rel="paste"><i class="icon-docs"></i> Paste</a></li><li>
+                <a href="#fileOps" rel="delete"><i class="icon-trash"></i> Delete</a></li>
 		</div>
-		<li><a href="#addFolder">Create new folder</a></li>
-		<li><hr /></li>
-		<li><a href="#about" rel="info">Help</a></li>
+		<li>
+        	<a href="#addFolder"><i class="icon-folder"></i>  New folder</a></li><li>
+        	<a href="#about" rel="info"><i class="icon-help"></i>  Help</a>
+        </li>
 	</ul>
 </div>
 <!--[if lt IE 9]>
