@@ -51,6 +51,17 @@ switch($_POST['type']){
 			 finish($e->getMessage());
 		}
 		break;
+	case 'rename':
+		if(strlen($_POST['name'])<1 || strlen($_POST['elem'])<1){
+			finish('400 Bad request');
+		}
+		try{
+			$dp->rename($_POST['elem'],$_POST['name'],$_POST['path']);
+			finish('',true);
+		}catch(Exception $e){
+			 finish($e->getMessage());
+		}
+		break;
 	default:
 		finish('400 Bad request');	
 }

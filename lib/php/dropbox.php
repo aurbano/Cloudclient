@@ -244,4 +244,17 @@ class Dropbox{
 			throw new Exception($e);
 		}
 	}
+	
+	public function rename($elem,$name,$path){
+		try{
+			$path = rtrim($path, '/');
+			// First we copy it
+			$this->dp->copy($path.'/'.$elem, $path.'/'.$name);
+			// Now delete original
+			$this->dp->delete($path.'/'.$elem);
+			return true;
+		}catch(Exception $e){
+			throw new Exception($e);
+		}
+	}
 };
