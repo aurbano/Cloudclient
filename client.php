@@ -310,8 +310,7 @@ a, a:visited, a:focus, a:link{
 	display:none;
 	box-shadow:#555 0 0 10px;
 	font-family:Tahoma, Geneva, sans-serif;
-	min-width:300px;
-	margin:0 1px 1px 0;
+	padding:0 1px 1px 0;
 }
 #context-menu ul{
 	margin:0;
@@ -322,17 +321,18 @@ a, a:visited, a:focus, a:link{
 #context-menu ul li,#context-menu ul li{
 	display:inline-block;
 	text-align:center;
-	padding:1px 0 0 1px;
+	margin:1px 0 0 1px;
 }
 #context-menu ul li,#context-menu ul li a{
 	display:inline-block;
 	text-decoration:none;
-	background:#36C;
+	background:#0a498e;
 	color:#fff;
 	width:98px;
 	height:98px;
 	font-size:90%;
 }
+#context-menu ul li a.red{background:#C00;}
 #context-menu ul li a:hover{
 	background:#009;
 }
@@ -388,21 +388,8 @@ a, a:visited, a:focus, a:link{
 	</div>
 </div>
 <div id="context-menu">
-	<ul>
-		<div id="fileOps" style="display:none;">
-			<li>
-            	<a href="#fileOps" rel="rename"><i class="icon-pencil"></i> Rename</a></li><li>
-            	<a href="#fileOps" rel="copy"><i class="icon-floppy"></i> Copy</a></li><li>
-                <a href="#fileOps" rel="cut"><i class="icon-popup"></i> Cut</a></li><li id="pasteOp" style="display:none">
-                <a href="#fileOps" rel="paste"><i class="icon-docs"></i> Paste</a></li><li>
-                <a href="#fileOps" rel="delete"><i class="icon-trash"></i> Delete</a></li>
-		</div>
-		<li>
-        	<a href="#addFolder"><i class="icon-folder"></i>  New folder</a></li><li>
-        	<a href="#about" rel="info"><i class="icon-help"></i>  Help</a>
-        </li>
-	</ul>
-</div>
+<ul><span id="fileOps" style="display:none;">
+<li><a href="#fileOps" rel="rename"><i class="icon-pencil"></i>Rename</a></li><li><a href="#fileOps" rel="copy"><i class="icon-floppy"></i>Copy</a></li><li><a href="#fileOps" rel="cut"><i class="icon-popup"></i>Cut</a></li><li id="pasteOp" style="display:none"><a href="#fileOps" rel="paste"><i class="icon-docs"></i> Paste</a></li><br /><li><a href="#fileOps" rel="delete" class="red"><i class="icon-trash"></i>Delete</a></li></span><li><a href="#addFolder"><i class="icon-folder"></i>New folder</a></li><li><a href="#about" rel="info"><i class="icon-help"></i>Help</a></li></ul></div>
 <!--[if lt IE 9]>
 	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
