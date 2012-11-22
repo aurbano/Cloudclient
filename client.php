@@ -391,6 +391,13 @@ a, a:visited, a:focus, a:link{
 </div>
 <div id="context-menu">
 	<ul>
+		<div id="fileOps" style="display:none;">
+			<li><a href="#fileOps" rel="rename">Rename</a></li>
+			<li><a href="#fileOps" rel="copy">Copy</a></li>
+			<li><a href="#fileOps" rel="cut">Cut</a></li>
+			<li><a href="#fileOps" rel="delete">Delete</a></li>
+			<li><hr /></li>
+		</div>
 		<li><a href="#addFolder">Create new folder</a></li>
 		<li><hr /></li>
 		<li><a href="#about" rel="info">Help</a></li>
