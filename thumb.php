@@ -12,11 +12,6 @@ try{
     die();
 }
 // Cache
-$headers = getallheaders();
-if(isset($headers['If-Modified-Since']) && $headers['If-Modified-Since'] == $fileinfo['modified']) {
-	header('HTTP/1.1 304 Not Modified');
-	exit();
-}
 header('Content-Type: '.$fileinfo['mime_type']);
 header('Last-Modified: '.$fileinfo['modified']);
 header("Pragma: cache");
