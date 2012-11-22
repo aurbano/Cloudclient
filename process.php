@@ -62,6 +62,17 @@ switch($_POST['type']){
 			 finish($e->getMessage());
 		}
 		break;
+	case 'delete':
+		if(strlen($_POST['elem'])<1){
+			finish('400 Bad request');
+		}
+		try{
+			$dp->delete($_POST['elem'],$_POST['path']);
+			finish('',true);
+		}catch(Exception $e){
+			 finish($e->getMessage());
+		}
+		break;
 	default:
 		finish('400 Bad request');	
 }
