@@ -253,7 +253,7 @@ class Dropbox{
 		}
 	}
 	
-	public function delete($elem){
+	public function delete($elem,$path){
 		try{
 			$path = rtrim($path, '/');
 			// First we copy it
