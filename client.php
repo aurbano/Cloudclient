@@ -80,6 +80,14 @@ a, a:visited, a:focus, a:link{
 	right:1em;
 	top:1.2em;	
 }
+#mainOpts a span{
+	position:absolute;
+	top:-3px;
+	left:3px;
+	width:11px;
+	height:3px;
+	background:inherit;
+}
 #sidebar{
 	z-index:9;	
 	width:60px;
@@ -303,6 +311,7 @@ a, a:visited, a:focus, a:link{
 	</div>
     <div id="breadcrumbs">Start</div>
     <div id="mainOpts">
+		<a href="#addFolder" class="iconSize" style="padding:3px 11px; background:#f9dd63; position:relative; color:#0a498e" title="Add folder"><span></span>+</a>
     	<a href="#icons" rel="6" class="iconSize" style="padding:3px 9px;" title="Bigger icons">+</a><a href="#icons" rel="-6" class="iconSize" style="padding: 1px 6px; font-size: 9px;" title="Smaller icons">-</a>
     </div>
 </div>
@@ -335,6 +344,7 @@ a, a:visited, a:focus, a:link{
 <![endif]-->
 <script type="text/javascript" language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" language="javascript" src="/lib/jqueryUI/js/jquery-ui-1.9.1.custom.min.js"></script>
+<script src="/lib/punch/touch_punch.min-0.2.2.js"></script>
 <script type="text/javascript" src="lib/lightbox/js/jquery.lightbox-0.5.min.js"></script>
 <script type="text/javascript" language="javascript" src="lib/js/UIview.js"></script>
 <script type="text/javascript" language="javascript" src="lib/js/client.js"></script>
