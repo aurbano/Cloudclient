@@ -106,6 +106,7 @@ a, a:visited, a:focus, a:link{
 }
 .view{
 	overflow:auto;
+	position:absolute;
 }
 .view>.content{
 	padding:20px;	
