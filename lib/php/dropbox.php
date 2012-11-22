@@ -203,11 +203,6 @@ class Dropbox{
 		}
 	}
 	
-	public function delete($id){
-		global $sess;
-		
-	}
-	
 	public function move($elemName,$destName,$path=false){
 		if(strlen($elemName)<1 || strlen(destName)<1){
 			throw new Exception('Wrong parameters');
@@ -240,6 +235,42 @@ class Dropbox{
 		try{
 			$path = rtrim($path, '/');
 			$this->dp->createFolder($path.'/'.$name);
+		}catch(Exception $e){
+			throw new Exception($e);
+		}
+	}
+	
+	public function rename($elem,$name,$path){
+		try{
+			$path = rtrim($path, '/');
+			// First we copy it
+			$this->dp->copy($path.'/'.$elem, $path.'/'.$name);
+			// Now delete original
+			$this->dp->delete($path.'/'.$elem);
+			return true;
+		}catch(Exception $e){
+			throw new Exception($e);
+		}
+	}
+	
+	public function copy($elem,$elemPath,$destPath){
+		try{
+			$elemPath = rtrim($elemPath, '/');
+			$destPath = rtrim($destPath, '/');
+			// Copy it to new path (Same name)
+			$this->dp->copy($elemPath.'/'.$elem, $destPath.'/'.$elem);
+			return true;
+		}catch(Exception $e){
+			throw new Exception($e);
+		}
+	}
+	
+	public function delete($elem,$path){
+		try{
+			$path = rtrim($path, '/');
+			// First we copy it
+			$this->dp->delete($path.'/'.$elem);
+			return true;
 		}catch(Exception $e){
 			throw new Exception($e);
 		}
