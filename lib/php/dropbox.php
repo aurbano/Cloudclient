@@ -45,7 +45,7 @@ class Dropbox{
 				$this->uid = $_SESSION['dropbox']['id'];
 			}
 		}catch(Exception $e){
-			throw Exception($e);	
+			throw new Exception($e);	
 		}
 	}
 	
@@ -234,5 +234,14 @@ class Dropbox{
 		if(!$timestamp) $time = strtotime($date);
 		else $time = $date;
 		return date("Y-m-d H:i:s", $time);	
+	}
+	
+	public function createFolder($name,$path){
+		try{
+			$path = rtrim($path, '/');
+			$this->dp->createFolder($path.'/'.$name);
+		}catch(Exception $e){
+			throw new Exception($e);
+		}
 	}
 };
