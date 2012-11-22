@@ -379,7 +379,7 @@ a, a:visited, a:focus, a:link{
 		<p>The frontend is entirely built in JavaScript, using jQuery and jQuery UI. There are two "classes", Client and UI. The Client class handles all the data, and the UI class makes sure it's nicely displayed.</p>
 		<p>The icons are actually pure HTML, except for the nice zipper in compressed files.</p>
 		<h2>Who?</h2>
-		<p>The entire client was developed by me, <a href="http://urbanoalvarez.es">Alejandro U. Alvarez</a></p>
+		<p>The entire client was developed by me, <a href="http://urbanoalvarez.es">Alejandro U. Alvarez</a> and my friend <a href="http://jaicab.com">Jaime Caballero</a></p>
 		<a href="#close" class="close"><img src="/img/close.png" /></a>
 	</div>
 	<div id="contact">
