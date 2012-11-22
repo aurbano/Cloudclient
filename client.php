@@ -339,6 +339,11 @@ a, a:visited, a:focus, a:link{
 	border:#aecff7 1px solid;
 	background:#eff2f6;
 }
+#context-menu hr{
+	border:none;
+	border-bottom:#FFF solid 1px;
+	border-top:#ccc solid 1px;	
+}
 </style>
 <link rel="stylesheet" type="text/css" href="/lib/jqueryUI/css/redmond/jquery-ui-1.9.1.custom.min.css" media="all" />
 <link rel="stylesheet" type="text/css" href="lib/lightbox/css/jquery.lightbox-0.5.css" media="screen" />
@@ -387,6 +392,8 @@ a, a:visited, a:focus, a:link{
 <div id="context-menu">
 	<ul>
 		<li><a href="#addFolder">Create new folder</a></li>
+		<li><hr /></li>
+		<li><a href="#about" rel="info">Help</a></li>
 	</ul>
 </div>
 <!--[if lt IE 9]>
