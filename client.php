@@ -353,11 +353,7 @@ a, a:visited, a:focus, a:link{
 <script type="text/javascript" language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" language="javascript" src="/lib/jqueryUI/js/jquery-ui-1.9.1.custom.min.js"></script>
 <script src="/lib/punch/touch_punch.min-0.2.2.js"></script>
-<<<<<<< HEAD
-<script type="text/javascript" src="lib/lightbox/js/jquery.lightbox-0.5.min.js"></script>
-=======
 <script type="text/javascript" src="/lib/lightbox/js/jquery.lightbox-0.5.min.js"></script>
->>>>>>> master
 <script type="text/javascript" language="javascript" src="lib/js/UIview.js"></script>
 <script type="text/javascript" language="javascript" src="lib/js/client.js"></script>
 </body>
