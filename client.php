@@ -304,15 +304,41 @@ a, a:visited, a:focus, a:link{
 #context-menu{
     z-index:1000;
     position: absolute;
-    background-color:#fff;
+    background-color:#ddd;
     border: 1px solid #777;
-    padding: 3px;
+    padding: 0px;
+	padding-left:30px;
 	display:none;
-	font-size:14px;
+	font-size:13px;
 	box-shadow:#555 0 0 10px;
+	font-family:Tahoma, Geneva, sans-serif;
+	min-width:300px;
 }
-
-
+#context-menu ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	border-left:#ccc solid 1px;
+	background-color:#efefef;
+}
+#context-menu ul li{
+	border:none;
+	border-left:#fff solid 1px;
+}
+#context-menu ul li a{
+	display:block;
+	padding:3px 6px;
+	color:#000;
+	text-decoration:none;
+	border:#efefef 1px solid;
+	border-radius:2px;
+	margin:1px;
+}
+#context-menu ul li a:hover{
+	background:#999;
+	border:#aecff7 1px solid;
+	background:#eff2f6;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="/lib/jqueryUI/css/redmond/jquery-ui-1.9.1.custom.min.css" media="all" />
 <link rel="stylesheet" type="text/css" href="lib/lightbox/css/jquery.lightbox-0.5.css" media="screen" />
@@ -360,8 +386,7 @@ a, a:visited, a:focus, a:link{
 </div>
 <div id="context-menu">
 	<ul>
-		<li><a href="#">Option 1</a></li>
-		<li><a href="#">Option 1</a></li>
+		<li><a href="#addFolder">Create new folder</a></li>
 	</ul>
 </div>
 <!--[if lt IE 9]>
