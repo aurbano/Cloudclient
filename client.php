@@ -12,10 +12,10 @@ html,body{
 	background:#0a4a8e url(img/body/bg.png) no-repeat bottom left;
 	padding:0;
 	margin:0;
-	width:100%;
-	height:100%;
 	font-family: "Century Gothic","Avant Garde Gothic",sans-serif;
 	overflow:hidden;
+	height:100%;
+	font-size:1em;
 }
 a, a:visited, a:focus, a:link{
 	outline:none;
@@ -24,30 +24,27 @@ a, a:visited, a:focus, a:link{
 }
 #header{
 	color:white;
-	height:150px;
-	width:100%;
-	position:absolute;
-	top:0;
-	left:0;
+	width:90%;
+	margin:2em 5%;
 	z-index:9;
+	position:relative;
 }
 #header, .item .name{
 	text-shadow:#069 0 1px 1px;
 }
 #header h1{
-	position:absolute;
-	left:120px;
-	bottom:40px;
-	margin:0;
 	padding:0;
 	font-weight:100;
-	font-size:48px;
+	font-size:300%;
+	display:inline-block;
+	margin:0;
 }
 #breadcrumbs{
-	position:absolute;
-	bottom:55px;
-	left:450px;
 	color:#96c3f5;
+	display:block;
+	position:absolute;
+	left:20em;	
+	top:1.3em;
 }
 #breadcrumbs a{
 	color:#FFF;
@@ -57,10 +54,12 @@ a, a:visited, a:focus, a:link{
 	color:#FF9;
 }
 #nav{
-	position:absolute;
-	bottom:55px;
-	right:100px;
 	color:#96c3f5;	
+	width:40%;
+	position:absolute;
+	top:1em;
+	right:6em;
+	display:inline-block;
 }
 #nav ul{
 	margin:0;
@@ -69,8 +68,9 @@ a, a:visited, a:focus, a:link{
 	font-size:21px;	
 }
 #nav ul li{
-	display:inline;
-	margin-right:100px;	
+	display:inline-block;
+	width:32%;
+	text-align:center;
 }
 #nav a:hover{
 	color:#fff;	
@@ -85,16 +85,22 @@ a, a:visited, a:focus, a:link{
 }
 #mainOpts{
 	position:absolute;
-	right:20px;
-	bottom:55px;	
+	right:1em;
+	top:1.2em;	
+}
+#mainOpts a span{
+	position:absolute;
+	top:-3px;
+	left:3px;
+	width:11px;
+	height:3px;
+	background:inherit;
 }
 #sidebar{
-	position:absolute;
 	z-index:9;	
-	top:50px;
-	left:0;
 	width:60px;
 	color:white;
+	position:absolute;
 }
 #back{
 	color: #54e8f9;
@@ -110,15 +116,13 @@ a, a:visited, a:focus, a:link{
 	color:#FFF;	
 }
 #viewport{
-	position:absolute;
-	top:150px;		/* Must be header height */
-	left:60px;		/* Must be sidebar width */
+	/*hey! take care of the sidebar too*/
+	margin-left:60px;
 	overflow:hidden;
 }
 .view{
-	position:absolute;
-	top:0;
 	overflow:auto;
+	position:absolute;
 }
 .view>.content{
 	padding:20px;	
@@ -262,6 +266,42 @@ a, a:visited, a:focus, a:link{
 .iconSize:hover{
 	border:#fff solid 1px;
 }
+
+
+@media screen and (max-width: 960px) {
+	#nav{
+		position:static;
+		width:100%;
+		margin:1em 0;
+	}
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 640px) {
+	html,body{
+		font-size:95%;
+	}
+	
+	#breadcrumbs{
+		margin:1em 0;
+		position:static;
+	}
+}
+@media screen and (max-width: 480px) {
+	#nav ul li{
+		width:100%;
+		display:block;
+		margin:0.5em 0;
+	}
+}
+@media screen and (max-width: 320px) {
+	html, body{
+		font-size:90%;
+	}
+}
+
+
 </style>
 <link rel="stylesheet" type="text/css" href="/lib/jqueryUI/css/redmond/jquery-ui-1.9.1.custom.min.css" media="all" />
 <link rel="stylesheet" type="text/css" href="lib/lightbox/css/jquery.lightbox-0.5.css" media="screen" />
@@ -270,7 +310,6 @@ a, a:visited, a:focus, a:link{
 <body>
 <div id="header">
     <h1>Cloudclient</h1>
-    <div id="breadcrumbs">Start</div>
 	<div id="nav">
 		<ul>
 			<li><a href="#about" rel="info" title="More information">About</a></li>
@@ -278,6 +317,7 @@ a, a:visited, a:focus, a:link{
 			<li><a href="/reset" title="Close current session">Logout</a></li>
 		</ul>
 	</div>
+    <div id="breadcrumbs">Start</div>
     <div id="mainOpts">
 	    <a href="#addFolder" class="iconSize" style="padding:3px 11px; background:#f9dd63; position:relative; color:#0a498e" title="Add folder"><span></span>+</a>
     	<a href="#icons" rel="6" class="iconSize" style="padding:3px 9px;" title="Bigger icons">+</a><a href="#icons" rel="-6" class="iconSize" style="padding: 1px 6px; font-size: 9px;" title="Smaller icons">-</a>
@@ -313,7 +353,11 @@ a, a:visited, a:focus, a:link{
 <script type="text/javascript" language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" language="javascript" src="/lib/jqueryUI/js/jquery-ui-1.9.1.custom.min.js"></script>
 <script src="/lib/punch/touch_punch.min-0.2.2.js"></script>
+<<<<<<< HEAD
+<script type="text/javascript" src="lib/lightbox/js/jquery.lightbox-0.5.min.js"></script>
+=======
 <script type="text/javascript" src="/lib/lightbox/js/jquery.lightbox-0.5.min.js"></script>
+>>>>>>> master
 <script type="text/javascript" language="javascript" src="lib/js/UIview.js"></script>
 <script type="text/javascript" language="javascript" src="lib/js/client.js"></script>
 </body>
