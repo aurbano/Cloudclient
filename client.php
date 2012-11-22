@@ -301,12 +301,15 @@ a, a:visited, a:focus, a:link{
 	}
 }
 
-.custom-menu {
+#context-menu{
     z-index:1000;
     position: absolute;
-    background-color:#C0C0C0;
-    border: 1px solid black;
-    padding: 2px;
+    background-color:#fff;
+    border: 1px solid #777;
+    padding: 3px;
+	display:none;
+	font-size:14px;
+	box-shadow:#555 0 0 10px;
 }
 
 
@@ -354,6 +357,12 @@ a, a:visited, a:focus, a:link{
 		<p>Or through my website <a href="http://urbanoalvarez.es">UrbanoAlvarez.es</a></p>
 		<a href="#close" class="close"><img src="/img/close.png" /></a>
 	</div>
+</div>
+<div id="context-menu">
+	<ul>
+		<li><a href="#">Option 1</a></li>
+		<li><a href="#">Option 1</a></li>
+	</ul>
 </div>
 <!--[if lt IE 9]>
 	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
