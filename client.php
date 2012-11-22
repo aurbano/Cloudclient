@@ -301,7 +301,49 @@ a, a:visited, a:focus, a:link{
 	}
 }
 
-
+#context-menu{
+    z-index:1000;
+    position: absolute;
+    background-color:#ddd;
+    border: 1px solid #777;
+    padding: 0px;
+	padding-left:30px;
+	display:none;
+	font-size:13px;
+	box-shadow:#555 0 0 10px;
+	font-family:Tahoma, Geneva, sans-serif;
+	min-width:300px;
+}
+#context-menu ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	border-left:#ccc solid 1px;
+	background-color:#efefef;
+}
+#context-menu ul li{
+	border:none;
+	border-left:#fff solid 1px;
+}
+#context-menu ul li a{
+	display:block;
+	padding:3px 6px;
+	color:#000;
+	text-decoration:none;
+	border:#efefef 1px solid;
+	border-radius:2px;
+	margin:1px;
+}
+#context-menu ul li a:hover{
+	background:#999;
+	border:#aecff7 1px solid;
+	background:#eff2f6;
+}
+#context-menu hr{
+	border:none;
+	border-bottom:#FFF solid 1px;
+	border-top:#ccc solid 1px;	
+}
 </style>
 <link rel="stylesheet" type="text/css" href="/lib/jqueryUI/css/redmond/jquery-ui-1.9.1.custom.min.css" media="all" />
 <link rel="stylesheet" type="text/css" href="lib/lightbox/css/jquery.lightbox-0.5.css" media="screen" />
@@ -346,6 +388,20 @@ a, a:visited, a:focus, a:link{
 		<p>Or through my website <a href="http://urbanoalvarez.es">UrbanoAlvarez.es</a></p>
 		<a href="#close" class="close"><img src="/img/close.png" /></a>
 	</div>
+</div>
+<div id="context-menu">
+	<ul>
+		<div id="fileOps" style="display:none;">
+			<li><a href="#fileOps" rel="rename">Rename</a></li>
+			<li><a href="#fileOps" rel="copy">Copy</a></li>
+			<li><a href="#fileOps" rel="cut">Cut</a></li>
+			<li><a href="#fileOps" rel="delete">Delete</a></li>
+			<li><hr /></li>
+		</div>
+		<li><a href="#addFolder">Create new folder</a></li>
+		<li><hr /></li>
+		<li><a href="#about" rel="info">Help</a></li>
+	</ul>
 </div>
 <!--[if lt IE 9]>
 	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
