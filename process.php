@@ -74,7 +74,7 @@ switch($_POST['type']){
 		}
 		break;
 	case 'copy':
-		if(strlen($_POST['elem'])<1 || strlen($_POST['from'])<1 || strlen($_POST['dest'])<1){
+		if(strlen($_POST['elem'])<1){
 			finish('400 Bad request');
 		}
 		try{
@@ -85,7 +85,7 @@ switch($_POST['type']){
 		}
 		break;
 	case 'cut':
-		if(strlen($_POST['elem'])<1 || strlen($_POST['from'])<1 || strlen($_POST['dest'])<1){
+		if(strlen($_POST['elem'])<1){
 			finish('400 Bad request');
 		}
 		try{
