@@ -73,6 +73,31 @@ switch($_POST['type']){
 			 finish($e->getMessage());
 		}
 		break;
+	case 'copy':
+		if(strlen($_POST['elem'])<1 || strlen($_POST['from'])<1 || strlen($_POST['dest'])<1){
+			finish('400 Bad request');
+		}
+		try{
+			$dp->copy($_POST['elem'],$_POST['from'],$_POST['dest']);
+			finish('',true);
+		}catch(Exception $e){
+			 finish($e->getMessage());
+		}
+		break;
+	case 'cut':
+		if(strlen($_POST['elem'])<1 || strlen($_POST['from'])<1 || strlen($_POST['dest'])<1){
+			finish('400 Bad request');
+		}
+		try{
+			// Copy to new path
+			$dp->copy($_POST['elem'],$_POST['from'],$_POST['dest']);
+			// Delete from old path
+			$dp->delete($_POST['elem'],$_POST['from']);
+			finish('',true);
+		}catch(Exception $e){
+			 finish($e->getMessage());
+		}
+		break;
 	default:
 		finish('400 Bad request');	
 }
