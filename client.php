@@ -376,12 +376,11 @@ a, a:visited, a:focus, a:link{
 </div>
 <div id="infoBox">
 	<div id="about">
-		<h2>Why?</h2>
-		<p>Because I can, and I wanted to learn about Dropbox structure.</p>
 		<h2>How?</h2>
 		<p>The backend is written in PHP and MySQL was used to replicate the Dropbox filesystem as local cache. The first time a user comes we pull the root directory from Dropbox and store it locally.</p>
 		<p>The frontend is entirely built in JavaScript, using jQuery and jQuery UI. There are two "classes", Client and UI. The Client class handles all the data, and the UI class makes sure it's nicely displayed.</p>
 		<p>The icons are actually pure HTML, except for the nice zipper in compressed files.</p>
+		<p>Check out the source code in <a href="https://github.com/aurbano/Cloudclient">Github</a>!</p>
 		<h2>Who?</h2>
 		<p>The entire client was developed by me, <a href="http://urbanoalvarez.es">Alejandro U. Alvarez</a> and my friend <a href="http://jaicab.com">Jaime Caballero</a></p>
 		<a href="#close" class="close"><img src="/img/close.png" /></a>
