@@ -10,6 +10,8 @@ if($sess->logged()){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Cloudclient | Dropbox web client</title>
+
+<link rel="stylesheet" href="/lib/entypoSocial/entypoSocial.css" type="text/css">
 <style type="text/css" media="all">
 html,body{
 	padding:0;
@@ -63,6 +65,8 @@ a:hover{
 	top:5px;
 	right:5px;
 }
+
+.icon-social-dropbox{font-size:300%; line-height:30%}
 </style>
 <link rel="stylesheet" type="text/css" href="/lib/jqueryUI/css/redmond/jquery-ui-1.9.1.custom.min.css" media="all" />
 </head>
@@ -71,7 +75,7 @@ a:hover{
 <div id="nav"><a href="/reset">Reset</a></div>
 <div id="box">
 	<h1>Cloudclient</h1>
-	<div id="login" class="hideOnAction"><a href="<?php echo $dp->loginLink(); ?>" class="externalLogin">Log in via Dropbox</a></div>
+	<div id="login" class="hideOnAction"><a href="<?php echo $dp->loginLink(); ?>" class="externalLogin"><i class="icon-social-dropbox">&#62256;</i>Log in via Dropbox</a></div>
 </div>
 <script type="text/javascript" language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" language="javascript" src="/lib/jqueryUI/js/jquery-ui-1.9.1.custom.min.js"></script>
