@@ -1,8 +1,14 @@
 Cloudclient
 ========
 
-A web client for cloud services like Dropbox. It uses a PHP backend to interact with the Dropbox API, although it is JavaScript who does most of the work.
+A web client for cloud services like Dropbox. It only supports Dropbox at the moment although I'd like to add more services like Box.com and Google Drive.
 
-For the PHP part it uses the Dropbox-PHP API by Evert Pot (http://www.rooftopsolutions.nl/) with some modifications.
+It works mainly in JavaScript, although it uses a PHP "proxy" to connect to the Dropbox API, mainly to simplify the process of OAuth
 
-If you see anything wrong post an issue or feel free to fork the project!
+- - - -
+
+Available at http://cloudclient.com
+
+- - - -
+
+Licensed under the MIT license
