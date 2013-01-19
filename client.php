@@ -377,8 +377,8 @@ a, a:visited, a:focus, a:link{
 <div id="infoBox">
 	<div id="about">
 		<h2>How?</h2>
-		<p>The backend is written in PHP and MySQL was used to replicate the Dropbox filesystem as local cache. The first time a user comes we pull the root directory from Dropbox and store it locally.</p>
-		<p>The frontend is entirely built in JavaScript, using jQuery and jQuery UI. There are two "classes", Client and UI. The Client class handles all the data, and the UI class makes sure it's nicely displayed.</p>
+		<p>The frontend is entirely built in JavaScript, using jQuery and jQuery UI. There are two "classes", Client and UI. Client handles all the data, and UI makes sure it's nicely displayed.</p>
+		<p>In order to safely interact with the server we use a PHP "proxy" that talks with the services' APIs</p>
 		<p>The icons are actually pure HTML, except for the nice zipper in compressed files.</p>
 		<p>Check out the source code in <a href="https://github.com/aurbano/Cloudclient">Github</a>!</p>
 		<h2>Who?</h2>
