@@ -7,7 +7,7 @@ It works mainly in JavaScript, although it uses a PHP "proxy" to connect to the 
 
 - - - -
 
-Available at http://cloudclient.com
+Available at http://cloudclient.es
 
 - - - -
 
