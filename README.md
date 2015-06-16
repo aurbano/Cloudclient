@@ -12,3 +12,5 @@ Available at http://cloudclient.es
 - - - -
 
 Licensed under the MIT license
+
+[![Analytics](https://ga-beacon.appspot.com/UA-3181088-16/Cloudclient/readme)](https://github.com/aurbano)
